@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cip Pacientes</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+   
+    <div class="paciente-box">
+        <form>
+            <!--Nombre del paciente-->
+            
+            <input id="nombre" type="text" placeholder="Nombre">
+            <!--Apellido del paciente-->
+           
+            <input id="apellido" type="text" placeholder="Apellido">
+            <!--Localidad del paciente-->
+           
+            <input id="localidad" type="text" placeholder="Localidad">
+            <!--Numero de Paciente-->
+           
+            <input id="numeroPaciente" type="text" placeholder="N° Paciente">
+
+            <div id="selecciones">
+                <!--Numero de Protocolo-->
+          
+                <select id="protocolos">
+                    <option selected>Seleccione</option>
+                </select>
+                <!--Ciclo del paciente-->
+                
+                <select id="ciclos">
+                    <option selected>Ciclo</option>
+                </select>
+                <!--FECHA DEL Ciclo del paciente-->
+                
+                <input type="date" id="fechaCiclo" min="2020-01-01" max="2030-12-31"> 
+                <!--Cargar datos del paciente-->
+                <button id="submit" type="button">Cargar</button>
+            </div>
+                     
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Mis Pacientes</h2>
+        <table class="table table-hover" id="pacienteTable">
+            <div id="filtradoCss">
+            <input type="text" id="txtFiltro" placeholder="Filtrar"> 
+            </div>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Localidad</th>
+                    <th>N° paciente</th>
+                    <th>Protocolo</th>
+                    <th>Ciclo</th>
+                    <th>Fecha</th>
+                    <th>
+                        <button id="calcular" type="button">Agregar</button>
+                        <button id="eliminar" type="button">Eliminar</button>  
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div class="container2">
+
+    <div class="contenedores">
+        <div class="otrocontenedor">
+            <table id="pacienteFechas">
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Prox. Ciclo</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+            <div class="otrocontenedor2">
+                <h2>Imagenes</h2>
+                <table id="pacienteImagenes">
+
+                    <thead>
+                        
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+    <footer>
+        <h2>
+            Centro de Investigación
+        </h2>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="main2.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
